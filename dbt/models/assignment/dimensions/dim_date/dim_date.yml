@@ -1,0 +1,63 @@
+version: 2
+
+models:
+  - name: dim_date
+    description: Date dimension for XKCD comics with various time-related attributes.
+    columns:
+      - name: date_id
+        data_type: integer
+        description: Unique key for each date (formatted as YYYYMMDD)
+        data_tests:
+          - unique
+          - not_null
+      - name: full_date
+        data_type: date
+        description: The full date (without time)
+        data_tests:
+          - not_null
+      - name: year
+        data_type: integer
+        description: The year of the date
+        data_tests:
+          - not_null
+      - name: quarter
+        data_type: integer
+        description: The quarter of the year (1-4)
+        data_tests:
+          - not_null
+      - name: semester
+        data_type: integer
+        description: The semester of the year (1 for Jan-Jun, 2 for Jul-Dec)
+        data_tests:
+          - not_null
+      - name: month
+        data_type: integer
+        description: The month of the year (1-12)
+        data_tests:
+          - not_null
+      - name: month_name
+        data_type: string
+        description: The full name of the month (e.g., January)
+      - name: day
+        data_type: integer
+        description: The day of the month (1-31)
+        data_tests:
+          - not_null
+      - name: day_of_week
+        data_type: integer
+        description: The day of the week (1=Monday, 7=Sunday)
+        data_tests:
+          - not_null
+      - name: day_name
+        data_type: string
+        description: The full name of the day (e.g., Monday)
+      - name: week_number
+        data_type: integer
+        description: The week number of the year
+        data_tests:
+          - not_null
+      - name: is_weekend
+        data_type: boolean
+        description: Flag to indicate if the date is a weekend (Saturday/Sunday)
+        data_tests:
+          - not_null

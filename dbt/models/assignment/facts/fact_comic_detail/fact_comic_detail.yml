@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: fact_comic_detail
+    description: Details of XKCD Comics
+    columns:
+      - name: comic_id
+        data_type: integer
+        description: Unique ID for each comic and source from where the information is pulled from
+        data_tests:
+          - unique
+          - not_null   
+      - name: date_id
+        data_type: integer
+        description: Unique ID for each date dimension
+        data_tests:
+          - not_null                    
+      - name: source_system
+        data_type: string
+        description: Name of the source from where this data is pulled
+        data_tests:
+          - not_null
+      - name: year
+        data_type: integer
+        description: Year the comic was published
+        data_tests:
+          - not_null
+      - name: month
+        data_type: integer
+        description: Month the comic was published
+        data_tests:
+          - not_null
+      - name: day
+        data_type: integer
+        description: Day the comic was published
+        data_tests:
+          - not_null
+      - name: total_customer_views
+        data_type: integer
+        description: The total number of views a comic has received
+        data_tests:
+          - not_null        
+      - name: comic_creation_cost
+        data_type: integer
+        description: The cost to create the comic, calculated based on the number of letters in the title (5 euros per letter)
+        data_tests:
+          - not_null        
+      - name: avg_customer_reviews
+        data_type: float
+        description: The average score (1.0 to 10.0) based on customer reviews for the comic
+        data_tests:
+          - not_null          
+      - name: _created_at
+        data_type: timestamp
+        description: Date when the record was inserted into the data warehouse

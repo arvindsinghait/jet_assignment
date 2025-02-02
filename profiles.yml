@@ -1,0 +1,12 @@
+jet_assignment:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: postgres
+      password: "{{ env_var('DBT_POSTGRES_PASSWORD') }}"
+      port: 5432
+      dbname: jet_assignment
+      schema: jet_assignment
+      threads: 1

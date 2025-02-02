@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: dim_comic
+    description: Details of XKCD Comics
+    columns:
+      - name: comic_id
+        data_type: integer
+        description: Unique ID for each comic
+        data_tests:
+          - unique
+      - name: source_comic_id
+        data_type: integer
+        description: Unique ID for each comic
+        data_tests:
+          - unique
+          - not_null
+      - name: comic_title
+        data_type: string
+        description: Title of the comic
+        data_tests:
+          - not_null
+      - name: comic_safe_title
+        data_type: string
+        description: Safe version of the comic title
+        data_tests:
+          - not_null
+      - name: alt
+        data_type: string
+        description: Alt-text
+      - name: img_url
+        data_type: string
+        description: URL to the comic's image
+        data_tests:
+          - not_null
+      - name: link
+        data_type: string
+        description: Link associated with the comic
+      - name: news
+        data_type: string
+        description: Any news associated with the comic
+      - name: transcript
+        data_type: string
+        description: Transcript of the comic
+      - name: _created_at
+        data_type: timestamp
+        description: Date when the record was inserted into the data warehouse

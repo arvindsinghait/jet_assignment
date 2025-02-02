@@ -1,0 +1,10 @@
+---
+
+version: 2
+
+sources:
+  - name: bronze_layer
+    database: jet_assignment
+    schema: jet_assignment_bronze
+    tables:
+      - name: xkcd_comic_detail

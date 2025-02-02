@@ -1,0 +1,31 @@
+name: "jet_assignment"
+version: "1.0.0"
+config-version: 2
+profile: 'jet_assignment'
+
+model-paths: ["dbt/models"]
+analysis-paths: ["dbt/analysis"]
+test-paths: ["dbt/data-tests"]
+seed-paths: ["dbt/data"]
+macro-paths: ["dbt/macros"]
+snapshot-paths: ["dbt/snapshots"]
+
+clean-targets:
+  - "./target"
+  - "dbt_packages"
+
+models:
+  jet_assignment:
+    assignment:
+      silver:
+        schema: "silver"
+      staging:
+        schema: "silver"
+      dimensions:
+        schema: "gold"
+      facts:
+        schema: "gold"
+
+data_tests:
+  +store_failures: true
+  +schema: "test"
