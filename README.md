@@ -17,3 +17,9 @@ and Fridays
 1. Clone the repo in local
 2. Install DBT, PostgreSQL and Airflow separately
 3. Export env varilable DBT_POSTGRES_PASSWORD based on password you have set while installing postgreSQL
+
+# DBT Airflow screenshot : 
+<img width="1483" alt="image" src="https://github.com/user-attachments/assets/18d0ae91-ecc9-4b8b-a1db-6a111ba4fdf3" />
+
+# Ingest Airflow screenshot : 
+<img width="1506" alt="image" src="https://github.com/user-attachments/assets/50c5daef-c0f7-4221-b259-2f46a3f9f592" />
