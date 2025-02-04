@@ -23,3 +23,6 @@ and Fridays
 
 # Ingest Airflow screenshot : 
 <img width="1506" alt="image" src="https://github.com/user-attachments/assets/50c5daef-c0f7-4221-b259-2f46a3f9f592" />
+
+# DBT Docs - Data Flow : 
+<img width="1132" alt="image" src="https://github.com/user-attachments/assets/08942bc3-2636-469b-87ae-9f93de600166" />
